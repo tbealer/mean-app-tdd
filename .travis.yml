@@ -1,13 +1,19 @@
 language: node_js
-
 node_js:
-  - "4.1"
-  - "4.0"
-  - '0.12'
-  - '0.11'
-
+- '5'
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.11'
 services: mongodb
-
 before_script:
-  - npm install -g mocha
-
+- npm install -g mocha
+deploy:
+  provider: heroku
+  api_key:
+    secure: Y9CDv49H+/j/clodMtZBcXAXY1pbXwzTSnEsIwuaBqAa45ivvU6eChHj2KGCAxtpu/gFhUy9XZQMpcn+DN0g07odcwApHhhYA9T2SfKC9TJ1XK5twXOKFEdThFMRRv9ATH8ekdcmqAYOKb4M0NTfKAmhTa+vfo27+tKypcp72z46n0/dMfh6m7ImNyeL1c0hn/SLZkEKDwNHu/1vneO4fRm/IfPNEuvhk2Hmz8vWKauGHbaqLILD1qHdyDrmSamd9kfOQOX6i6MRj3XFZ9R8bwGYra+inVJjBkXkPOfx2grYRlB5JJTTP413zUsPibBv24l43ttfNssMITUZFB3rq2eJSCR1WZzasHvg/hFaU48AB7iLvtbL05pMU5kVBjjT2RaDkxNQ/UQDVdXjvbieOOkGoeLEmYcU4aQKiIO/UuUAEGP1APqZ2QWuLt5tmvxNWZwKamlsELN9H19ysjeG+M34t0NFcoQdFeGkQgAxQqN6YBDzFyOnJZKEYJtpDGQuCL/kC3hJCIcHmChpoEvv3HW4/ZDXUzjpHmV4WptWzN3nyLdFo3QTUhCd7LZHXF3+W74Ha2r9OUgUtCJzjYpq3ygpdBg9BN/oMJxpLkItK473tPxpgm4ePQ1vVi6jcP0M6zPSsi4ute4hF9P6YJ32Q1O/2ViHNykbDGH/lSzdaAI=
+  app: mysterious-scrubland-12138
+  on:
+    branch: master
+    node: '5'
+    repo: tbealer/mean-app-tdd
