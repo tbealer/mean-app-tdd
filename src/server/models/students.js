@@ -16,6 +16,21 @@ var StudentSchema = new Schema({
   }
 });
 
+var User = new Schema({
+  email:{
+    type: String,
+    required:true
+  },
+  password:{
+    type: String,
+    required: true
+  },
+  admin:{
+    type: Boolean,
+    default: false
+  }
+})
+
 var Student = mongoose.model('student', StudentSchema);
 
 
