@@ -1,4 +1,5 @@
 # Developing a RESTful MEAN App
+[![Build Status](https://travis-ci.org/tbealer/mean-app-tdd.svg?branch=master)](https://travis-ci.org/tbealer/mean-app-tdd)
 
 Let's build a full-stack RESTful MEAN app, utilizing TDD.
 
