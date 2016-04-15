@@ -47,4 +47,13 @@ app.controller('editStudentController', ['$scope', '$window', 'studentDataServic
     $window.location.reload(); // refactor!
   };
 
+
 }]);
+
+
+app.controller('registerController', ['$scope', function($scope){
+  $scope.user = {};
+  $scope.register = function () {
+    console.log($scope.user);
+  }
+}])

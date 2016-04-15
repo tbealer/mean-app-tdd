@@ -72,3 +72,19 @@ app.service('crudService', ['$http', function($http) {
   };
 
 }]);
+
+app.service('authService', ['$http', function($http) {
+  var user = {};
+  return {
+    login: function(user) {
+      return $http('/auth/login', user);
+    },
+    logout: function(user) {
+      user = null;
+      $window.localStorage.clear();
+    },
+    register: function(user) {
+      return $http('/auth/register', user);
+    }
+  };
+}]);
