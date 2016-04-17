@@ -51,7 +51,7 @@ app.controller('editStudentController', ['$scope', '$window', 'studentDataServic
 }]);
 
 
-app.controller('registerController', ['$scope', function($scope){
+app.controller('registerController', ['$scope', 'authService', function($scope){
   $scope.user = {};
   $scope.register = function () {
     console.log($scope.user);

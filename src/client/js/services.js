@@ -85,6 +85,14 @@ app.service('authService', ['$http', function($http) {
     },
     register: function(user) {
       return $http('/auth/register', user);
+    },
+    setUserInfo: function (userData) {
+      $window.localStorage.set('user', 'PLACEHOLDER');
+      $window.localStorage.set('token', 'PLACEHOLDER');
+    },
+    getUserInfo: function (userData) {
+      $window.localStorage.get('user', 'PLACEHOLDER');
+      
     }
   };
 }]);
